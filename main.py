@@ -95,7 +95,7 @@ def desenhar_hud():
     tela.blit(placar, (20, 665))
 
     if not fim_de_jogo:
-        texto_turno = "Vez: Branco" if jogador == 1 else "Vez: Preto"
+        texto_turno = "Vez: Cinza" if jogador == 1 else "Vez: Preto"
     else:
         if x > o:
             texto_turno = "Branco venceu!"
