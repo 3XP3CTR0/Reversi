@@ -1,7 +1,7 @@
 import pygame
 from game import criar_tabuleiro, jogada_valida, jogar, contar_pecas, tem_jogada_valida
 
-# ---------------- CONFIGURAÇÕES ----------------
+# CONFIGURAÇÕES 
 
 LARGURA = 640
 ALTURA = 760
@@ -22,17 +22,17 @@ relogio = pygame.time.Clock()
 fonte = pygame.font.SysFont("arial", 22)
 fonte_grande = pygame.font.SysFont("arial", 34)
 
-# ---------------- ESTADO DO JOGO ----------------
+#ESTADO DO JOGO
 
 def resetar_jogo():
     global tab, jogador, fim_de_jogo
     tab = criar_tabuleiro()
-    jogador = 1   # 1 = Branco | -1 = Preto
+    jogador = 1   # 1 = Branco, -1 = Preto
     fim_de_jogo = False
 
 resetar_jogo()
 
-# ---------------- BOTÃO ----------------
+#BOTÃO
 
 BOTAO_RECT = pygame.Rect(240, 720, 160, 30)
 
@@ -45,7 +45,7 @@ def desenhar_botao():
          BOTAO_RECT.centery - texto.get_height() // 2)
     )
 
-# ---------------- DESENHO ----------------
+#DESENHO
 
 def desenhar_tabuleiro(tab):
     tela.fill(VERDE)
@@ -109,7 +109,7 @@ def desenhar_hud():
 
     desenhar_botao()
 
-# ---------------- LOOP PRINCIPAL ----------------
+#LOOP PRINCIPAL
 
 rodando = True
 
